@@ -1,53 +1,72 @@
 package com.hybrid;
 
-import org.testng.annotations.AfterClass;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
 import com.pomclasses.AdminPagePom;
+import com.util.Utility;
 
-public class AdminTest extends AdminBase {
+public class AdminTest extends Base{
+	 Base base = new Base();
 	
-	AdminPagePom admin = new AdminPagePom();
-	AdminBase base = new AdminBase();
 	
-	@BeforeClass
-	public void setup(){
-		base.getBrowser();
+	 @BeforeClass
+	 public void setup(){
+		
+		base.launchWebsite();
 	}
 	
-	@AfterClass
-	/*public void teardown()
+	 @Test
+	public void loginpage() throws InterruptedException {
+		 	LoginpageTest loginpagetest = new LoginpageTest();
+		 	loginpagetest.adminLogin();
+		
+		 	Utility.setImplicitWait(5);
+		 	AdminPagePom admin = new AdminPagePom();
+		 	//admin.Arrow();
+		 	admin.job();
+		 	Thread.sleep(5000);
+		 	admin.jobTitles();
+		 	admin.Add();
+		 	admin.AddJobTitle();
+		 	admin.JobDescription();
+		 	admin.AddNote();
+		 	admin.submit();
+			
+		
+	}
+	 
+	
+	
+	
+		
+		
+		
+	
+		
+		
+		
+		//admin.job();
+		//admin.jobtitles();
+		//admin.checkjobTitles();
+	//}
+	
+	
+	/*@AfterClass
+	public void teardown()
 	{
 		driver.close();
 	}*/
 	
-	@Test
+	/*@Test
 	public void TestTitle()
 	{
 		String str = driver.getTitle();
 		System.out.println(str);
 		Assert.assertEquals(str, "OrangeHRM");
-	}
+	}*/
 	
-	@Test
-	public void Admin() {
-		AdminPagePom admin = new AdminPagePom();
-		
-		String str = admin.getUsername();
-		String str1 = admin.getPassword();
-		
-		Assert.assertEquals(str, "Admin");
-		Assert.assertEquals(str1,"admin123");
-	     admin.setUsername(str);
-		admin.setPassword(str1);
-		admin.login();
-		admin.search();
-		admin.adminClick();
-		admin.job();
-		admin.jobtitles();
-		admin.checkjobTitles();
-	}
+	
+	
 }

@@ -50,7 +50,8 @@ public class LoginPagePom extends Base{
 	}
 	
 	public void login() {
-		submitbutton.click();
+		//submitbutton.click();
+		Utility.elementClick(submitbutton);
 	}
 	
 }

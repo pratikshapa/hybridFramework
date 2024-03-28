@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FbBase{
 	public static WebDriver driver;
+	public static String projectPath = System.getProperty("user.dir");
 	
     public void inhokeBrowser(){
 	

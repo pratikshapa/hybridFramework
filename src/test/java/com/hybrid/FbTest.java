@@ -1,10 +1,13 @@
 package com.hybrid;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.pomclasses.Facebook;
+import com.util.Utility;
 
 
 public class FbTest extends FbBase{
@@ -38,4 +41,11 @@ public class FbTest extends FbBase{
 		 fb.gender();
 		 fb.signup();
 	 }
+	
+	@Test
+	public void screenShot() throws IOException {
+		
+		Utility utility = new Utility();
+		utility.takeScreenshot("signup");
+	}
 }
