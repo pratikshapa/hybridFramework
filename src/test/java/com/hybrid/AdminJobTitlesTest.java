@@ -4,10 +4,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-import com.pomclasses.AdminPagePom;
+import com.pomclasses.AdminJobTitlesPom;
 import com.util.Utility;
 
-public class AdminTest extends Base{
+public class AdminJobTitlesTest extends Base{
 	 Base base = new Base();
 	
 	
@@ -25,7 +25,7 @@ public class AdminTest extends Base{
 		 	
 		
 		 	Utility.setImplicitWait(5);
-		 	AdminPagePom admin = new AdminPagePom();
+		 	AdminJobTitlesPom admin = new AdminJobTitlesPom();
 		 	
 		 	Thread.sleep(5000);
 		 	admin.AdminClick();

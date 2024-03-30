@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.hybrid.Base;
 import com.util.Utility;
 
-public class AdminPagePom extends Base{
+public class AdminJobTitlesPom extends Base{
 	
-	public AdminPagePom() {
+	public AdminJobTitlesPom() {
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//button[@role='none']") 

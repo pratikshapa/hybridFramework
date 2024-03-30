@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hybrid.AdminTest">
+      <class name="com.hybrid.AdminJobTitlesTest">
         <methods>
           <include name="setup"/>
           <include name="loginpage"/>
         </methods>
-      </class> <!-- com.hybrid.AdminTest -->
+      </class> <!-- com.hybrid.AdminJobTitlesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
