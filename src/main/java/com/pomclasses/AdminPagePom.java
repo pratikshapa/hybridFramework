@@ -34,6 +34,8 @@ public class AdminPagePom extends Base{
     
     @FindBy(xpath="//button[@type='submit']") 
     private WebElement Submit;
+    
+    @FindBy(xpath="//span[text()='Admin']") private WebElement AdminClick;
    
     /*@FindBy(xpath="(//i[@class='oxd-icon bi-trash'])[1]") private WebElement Delete;
    
@@ -41,46 +43,53 @@ public class AdminPagePom extends Base{
     private WebElement NoCancel;*/
     
     
+    	public void AdminClick()
+    	{
+    		//AdminClick.click();
+    		Utility.elementClick(AdminClick);
+    	}
+    	
     	public void Arrow()
     	{
-    		//Utility.elementClick(Arrow);
-    		Arrow.click();
+    		Utility.elementClick(Arrow);
+    		//Arrow.click();
     	}
     
    
 	    public void job()
 	    {
-	    	//Utility.elementClick(job);
-	    	job.click();
+	    	Utility.elementClick(job);
+	    	//job.click();
 	    }
 	   
 	    public void jobTitles()
 	    {
-	    	//Utility.elementClick(jobTitles);
-	    	jobTitles.click();
+	    	Utility.elementClick(jobTitles);
+	    	//jobTitles.click();
 	    }
 	  
 	    public void Add()
 	    {
-	    	//Utility.elementClick(Add);
-	    	Add.click();
+	    	Utility.elementClick(Add);
+	    	//Add.click();
 	    }
 	   
-	    public void AddJobTitle()
+	    public void AddJobTitle(String value)
 	    {
-	    	//Utility.setText(value, AddJobTitle);
-	    	AddJobTitle.sendKeys("ManualTester");
+	    	Utility.setText(value, AddJobTitle);
+	    	//AddJobTitle.sendKeys("SoftwareSeveloper");
 	    }
 	   
-	    public void JobDescription()
+	    public void JobDescription(String value)
 	    {
-	    	//Utility.setText(value, JobDescription);
-	    	JobDescription.sendKeys("i work on manual Testing");
+	    	Utility.setText(value, JobDescription);
+	    	//JobDescription.sendKeys("i work on manual Testing");
 	    }
 	   
-	    public void AddNote()
+	    public void AddNote(String value)
 	    {
-	    	AddNote.sendKeys("ManualTesting");
+	    	Utility.setText(value, AddNote);
+	    	//AddNote.sendKeys("ManualTesting");
 	    }
 	   
 	    public void submit()

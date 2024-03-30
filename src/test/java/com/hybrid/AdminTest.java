@@ -21,52 +21,28 @@ public class AdminTest extends Base{
 	public void loginpage() throws InterruptedException {
 		 	LoginpageTest loginpagetest = new LoginpageTest();
 		 	loginpagetest.adminLogin();
+		 	
+		 	
 		
 		 	Utility.setImplicitWait(5);
 		 	AdminPagePom admin = new AdminPagePom();
-		 	//admin.Arrow();
-		 	admin.job();
+		 	
 		 	Thread.sleep(5000);
+		 	admin.AdminClick();
+		 	admin.job();
 		 	admin.jobTitles();
+		 	
+		 	
+		 	Thread.sleep(5000);
 		 	admin.Add();
-		 	admin.AddJobTitle();
-		 	admin.JobDescription();
-		 	admin.AddNote();
+		    admin.AddJobTitle("AutomationTester");
+		 	
+		 	admin.JobDescription("i work on both manual and automation testing");
+		 	admin.AddNote("testing");
 		 	admin.submit();
-			
-		
-	}
-	 
-	
-	
-	
-		
-		
-		
-	
-		
-		
-		
-		//admin.job();
-		//admin.jobtitles();
-		//admin.checkjobTitles();
-	//}
-	
-	
-	/*@AfterClass
-	public void teardown()
-	{
-		driver.close();
-	}*/
-	
-	/*@Test
-	public void TestTitle()
-	{
-		String str = driver.getTitle();
-		System.out.println(str);
-		Assert.assertEquals(str, "OrangeHRM");
-	}*/
-	
-	
-	
-}
+		 	
+		 	
+		 	//admin.Arrow();
+		 	
+		 	}
+	 }

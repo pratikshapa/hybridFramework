@@ -56,10 +56,24 @@ public class LoginpageTest extends Base{
 	}
 	
 	@Test
+	public void loginlink()
+	{
+		LoginPagePom loginpagepom = new LoginPagePom();
+		loginpagepom.homepageLink();
+	}
+	
+	@Test
+	public void windowHandles()
+	{
+		base.windowHandle();
+	}
+	       
+	@Test
 	public void screenShot() throws IOException {
 		Utility utility = new Utility();
 		
 		utility.takeScreenshot("OHRM");
+		
 	}
 
 }

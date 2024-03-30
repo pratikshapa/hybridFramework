@@ -53,6 +53,9 @@ public class LoginPagePom extends Base{
 		//submitbutton.click();
 		Utility.elementClick(submitbutton);
 	}
-	
+	public void homepageLink()
+	{
+		Utility.elementClick(hompagelink);
+	}
 }
 
